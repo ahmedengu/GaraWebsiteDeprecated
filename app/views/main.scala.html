@@ -1,0 +1,139 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Keywords" content="car,pool">
+        <meta name="description" content="AAST car Pooling service">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/logo.png")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")"/> <script src="@routes.Assets.at("javascripts/main.js")"></script>
+        <title>@title</title>
+
+    </head>
+
+    <body onload="onTheLoad()" onkeydown="keyEvent(event)" >
+
+            <!-- Header -->
+        <div id="header-wrapper">
+            <header class="container">
+
+                    <!-- Logo -->
+                <div id="logo"> <a href="@routes.Application.index()" title="AAST Pool It"><img src="@routes.Assets.at("images/logo.png")" alt="AAST Pool It"/> </a>  </div>
+
+                    <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current">
+                            <a href="@routes.Application.index()">Home</a>
+                        </li>
+                        <li>
+                            <a href="@routes.Application.services()">Services</a>
+                        </li>
+                        <li class="blog-li">
+                            <a href="@routes.Application.register()">Register</a>
+                        </li>
+                        <li>
+                            <a href="@routes.Application.login()">Login</a>
+                        </li>
+
+                        <li>
+                            <a href="@routes.Application.about()">About Us</a>
+                        </li>
+                        <li>
+                            <a href="@routes.Application.contact()">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </header>
+        </div>
+
+        <main id="theMain">
+                <!-- Slide -->
+
+
+                <!-- Features -->
+            <div id="features-wrapper">
+                <div class="container">
+                @content
+                </div>
+            </div>
+
+        </main>
+            <!-- Footer -->
+        <hr>
+
+        <div id="footer-wrapper">
+            <footer class="container">
+                <div class="row">
+
+                        <!-- Links -->
+                    <section class="widget links ">
+                        <h3>Links</h3>
+                        <ul>
+                            <li>
+                                <a href="@routes.Application.index()">Home</a>
+                            </li>
+                            <li>
+                                <a href="@routes.Application.services()">Services</a>
+                            </li>
+                            <li >
+                                <a href="@routes.Application.register()">Register</a>
+                            </li>
+
+                            <li>
+                                <a href="@routes.Application.login()">Login</a>
+                            </li>
+
+                            <li>
+                                <a href="@routes.Application.about()">About Us</a>
+                            </li>
+                            <li>
+                                <a href="@routes.Application.contact()">Contact Us</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="footer-location">
+
+                            <!-- Links -->
+                        <section class="widget location">
+                            <h3>location</h3>
+
+                            <div class="footer-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12987.694841235747!2d35.776339!3d35.5308829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xed5db8d49172beb5!2sArab+Academy+for+Science+and+Technology+and+Maritime+Transport!5e0!3m2!1sar!2seg!4v1461094854707"
+                                width="400" height="280" allowfullscreen></iframe>
+                            </div>
+                        </section>
+
+                    </div>
+
+
+                        <!-- Contact -->
+                    <section class="widget contact last">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><a href="#" class="icon "><img id="fbIcon" onmouseover="changeImge(this)" onmouseout="changeImgeNot(this)" src="@routes.Assets.at("images/fb_icon_325x325.png")" alt="some image alt"></a></li>
+                            <li><a href="#" class="icon "><img id="twIcon" onmouseover="changeImge(this)" onmouseout="changeImgeNot(this)" src="@routes.Assets.at("images/Twitter-icon-150x150.png")" alt="some image alt"></a></li>
+                            <li><a href="#" class="icon "><img id="ytIcon" onmouseover="changeImge(this)" onmouseout="changeImgeNot(this)" src="@routes.Assets.at("images/youtube-128.png")" alt="some image alt"></a></li>
+
+                        </ul>
+                        <p>AAST, Abou Qir <br/> Alexandria<br/> <b>Egypt</b>
+
+                </p>
+
+                    </section>
+
+                </div>
+
+                <div id="copyright">
+            All Copyright Reserved 2016
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>

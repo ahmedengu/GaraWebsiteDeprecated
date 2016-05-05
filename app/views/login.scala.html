@@ -1,0 +1,21 @@
+@(title: String)
+
+@main(title) {
+
+    <div class="product-data">
+        <h4>Register Us</h4>
+        <br>
+        <form action="@routes.Application.doLogin()" method="post" onsubmit="return formSubmit(this)">
+
+
+
+            <label class="formError"> <input onblur="formOnBlur(this)" type="email" name="email" placeholder="email" required/><p></p></label>
+
+
+            <label class="formError"> <input onblur="formOnBlur(this)" type="password" name="password" placeholder="password" required/><p></p></label>
+
+            <input type="submit" value="login" />
+        </form>
+        <br>
+    </div>
+}
